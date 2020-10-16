@@ -16,13 +16,20 @@ $user = $query->fetchAll();
     <head>
         <meta charset="utf-8"/>
         <title>BDD</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
     <h2>Voici la base de donnée</h2>
     <ul class="liste">
         <?php foreach ($user as $contact):?>
-            <li>
-                <?= $contact['name']?> <?=$contact['firstName']?> <?=$contact['password']?> <?=$contact['gender']?> <?=$contact['mail'] ?>
+            <div>
+            <p>
+                <p>Nom : <?= $contact['name']?></p>
+                <p>Premon : <?=$contact['firstName']?></p>
+                <p>Mot de passe : <?=$contact['password']?></p>
+                <p>Genre : <?=$contact['gender']?></p>
+                <p>Mail : <?=$contact['mail'] ?></p>
+            </div>
             </li>
 
         <?php endforeach; ?>
