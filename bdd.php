@@ -8,9 +8,7 @@ $query = $pdo->prepare('SELECT * FROM user');
 $ok = $query->execute();
 
 $user = $query->fetchAll();
-
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -23,7 +21,6 @@ $user = $query->fetchAll();
     <ul class="liste">
         <?php foreach ($user as $contact):?>
             <div>
-            <p>
                 <p>Nom : <?= $contact['name']?></p>
                 <p>Premon : <?=$contact['firstName']?></p>
                 <p>Mot de passe : <?=$contact['password']?></p>
@@ -31,10 +28,7 @@ $user = $query->fetchAll();
                 <p>Mail : <?=$contact['mail'] ?></p>
             </div>
             </li>
-
         <?php endforeach; ?>
     </ul>
-
     </body>
 </html>
-
