@@ -17,18 +17,19 @@ $user = $query->fetchAll();
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <h2>Voici la base de donnée</h2>
-    <ul class="liste">
-        <?php foreach ($user as $contact):?>
-            <div>
-                <p>Nom : <?= $contact['name']?></p>
-                <p>Premon : <?=$contact['firstName']?></p>
-                <p>Mot de passe : <?=$contact['password']?></p>
-                <p>Genre : <?=$contact['gender']?></p>
-                <p>Mail : <?=$contact['mail'] ?></p>
-            </div>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+        <h2>Voici la base de donnée</h2>
+
+            <?php foreach ($user as $contact):?>
+                <div>
+                    <p>Nom : <?= $contact['name']?></p>
+                    <p>Premon : <?=$contact['firstName']?></p>
+                    <p>Mot de passe : <?=$contact['password']?></p>
+                    <p>Genre : <?=$contact['gender']?></p>
+                    <p>Mail : <?=$contact['mail'] ?></p>
+                    <a href="suprimer.php?id=<?= $contact['id'] ?> ">Suprimer</a>
+                    <a href="modifier.php?id=<?= $contact['id'] ?> ">Modifier</a>
+                </div>
+            <?php endforeach; ?>
+
     </body>
 </html>

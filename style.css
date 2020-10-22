@@ -6,16 +6,10 @@ html{
     text-align: center;
     background-color: darkseagreen;
 }
-fieldset{
-    box-shadow: 0px 0px 8px 8px white;
-    color: white;
-}
-legend{
-    padding-top: 25px;
-}
 div{
     background-color: gainsboro;
     border-radius: 10px;
-    margin: 0.5em 4em 1em 4em;
-    padding: 0.5em;
+    margin: 0.5em 10em 1em 10em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
